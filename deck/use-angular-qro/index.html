@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Razones que me llevaron a AngularJS</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../core/deck.core.css">
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="../extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="../extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="../extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="../extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="../extensions/scale/deck.scale.css">
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/style/neon.css">
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/transition/fade.css">
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="../core/print.css">
+  <!-- Required Modernizr file -->
+  <script src="../modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section id="title" class="slide">
+      <h2>Cuando jQuery ya no es suficiente. <br />¿Quién podría ayudarme?</h2>
+      <img alt="AngularJS logo" src="./images/angular.png">
+      <h3>al rescate...</h3>
+    </section>
+
+    <section id="about-me" class="slide">
+      <h2>Acerca de mi</h2>
+      <h3 class="tleft">Pablo Cerda / Twitter @citlacom</h3>
+      <ul>
+        <li>Desarrollador PHP / Python / PERL / R / JS / CSS / SASS con 10 años de experiencia</li>
+        <li>Estudiante autodidacta de análisis estadístico y minería de datos con R</li>
+        <li>Investigador de los eventos ciclicos y su relación con las órbitas planetarias</li>
+        <li>Emprendedor en internet con proyectos como moduti.com y horoscopeame.com</li>
+        <li>Trabajando en proyectos web con el CMS Drupal los últimos 6 años</li>
+        <li>Uso de jQuery en desarollos Drupal para hace páginas más dinámicas</li>
+        <li>Frustrado de los snippets JS que crecen más de 200 líneas</li>
+      </ul>
+    </section>
+
+    <section id="jquerydie" class="slide">
+      <h2>Como tú, yo también quedé hechizado con jQuery</h2>
+      <h3>Pero un día me pidieron desarrollar un editor de páginas que no tuviera que recargarse en cada interacción del editor.</h3>
+      <blockquote><p>El código JS era bastante extenso, más de 1000 líneas de código y difícil de mantener. Algo estaba haciendo mal. <br /> No usaba las herramientas correctas.</p></blockquote>
+    </section>
+
+    <section id="research" class="slide">
+      <h2>Empecé a escuchar de Backbone.js y AngularJS</h2>
+      <h3>Después de ver algunas presentaciones básicas y hacer pruebas, presentí que tenía en mis manos la herramienta correcta.</h3>
+      <blockquote><p>Y llegó otro proyecto... <br /> Requería una interfáz dinámica que no tuviera que recargarse en cada interacción.</p></blockquote>
+    </section>
+
+    <section id="goals" class="slide">
+      <h2>¿Qué es lo que buscaba en AngularJS?</h2>
+      <ul>
+        <li>Organización MVC del código para crecer sanamanete</li>
+        <li>Que las plantillas HTML fueran fáciles de escribir</li>
+        <li>Preservar el estado de la variables cuando se recarga la página o se comparte el enlace</li>
+        <li>Tener un fichero de configuración que me permita adaptar una aplicación a usos diferentes</li>
+        <li>Sincronización automática de valores de variables con los valores de elementos de formulario</li>
+        <li>Disponer de servicios que una vez inicializados compartan su estado con cualquier controlador</li>
+        <li>Extender funciones similares para evitar duplicación de código</li>
+        <li>Poder reutilizar código de otros desarrolladores</li>
+      </ul>
+    </section>
+
+    <section id="success" class="slide">
+      <h2>Lo encontré todo</h1>
+      <img alt="Niño lleno de felicidad" src="./images/15004763391_b216447851_c.jpg">
+    </section>
+
+    <section id="goal-mvc" class="slide">
+      <h2>Organización del código</h2>
+      <h3>AngularJS te obliga a crear controladores específicos para cada parte de tu interfaz y un elemento HTML del DOM queda asociado.</h3>
+      <h4>En mi proyecto los principales controladores son:</h4>
+      <ul>
+        <li>Main - Controla inicialización de variables de configuración</li>
+        <li>SearchBox - Controla la caja de búsqueda</li>
+        <li>FacetGroup - Controla la inicialización de los facets</li>
+        <li>FacetField - Controla las opciones de cada facets (activación/desactivación)</li>
+        <li>Results - Controla la visualización general de los resultados y paginación</li>
+        <li>Result - Controla cada elemento individual de los resultados y activación de vista de detalle</li>
+        <li>DetailPage - Maneja la visualización de detalle de un resultado</li>
+      </ul>
+    </section>
+
+    <section id="goal-templates" class="slide">
+      <h2>Plantillas fáciles de escribir</h2>
+      <h3>AngularJS usa sintaxis HTML con opciones avanzadas muy fáciles de aprender como:</h3>
+      <ul>
+        <li>Valores de reemplazo - {{nombre_variable}} o {{objeto.propiedad}}</li>
+        <li>Atributo ng-repeat="tag in topic.tags" para iterar un array</li>
+        <li>Atributo ng-show="documents.length > 0" para condicionar visualización de elemento</li>
+        <li>Atributo ng-hide="documents.length <= 0" para condicionar ocultación de elemento</li>
+        <li>Atributo ng-click="handleSetPage(page.number)" para ejecutar función en el evento click</li>
+      </ul>
+    </section>
+
+    <section id="template-example" class="slide">
+      <h2>Ejemplo de Plantilla</h2>
+        <code>
+          <pre>
+  &lt;!--Results summary--&gt;
+  &lt;div class=&quot;search__messages&quot; ng-show=&quot;documents.length &gt; 0&quot; ng-cloak&gt;
+    &lt;div class=&quot;search__no-results&quot; ng-hide=&quot;documents.length&quot;&gt;{{ LABELS.NO_RESULTS }}&lt;/div&gt;
+    &lt;div class=&quot;messages message--error alert alert-warning&quot; ng-show=&quot;error&quot;&gt;{{ error }}&lt;/div&gt;
+    &lt;div class=&quot;messages message--info alert alert-info&quot; ng-show=&quot;message&quot;&gt;{{ message }}&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!--Results display--&gt;
+  &lt;div class=&quot;search__results-list&quot; ng-repeat=&quot;document in documents&quot;&gt;
+      &lt;resultdefault document=&quot;document&quot;&gt;&lt;/resultdefault&gt;
+  &lt;/div&gt;
+
+  &lt;!--Pagination--&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;pager__item&quot; ng-repeat=&quot;page in pages&quot;&gt;
+      &lt;a ng-class=&quot;{iscurrent:page.isCurrent}&quot; ng-class=&quot;{pager__item-current:page.isCurrent}&quot;
+        ng-click=&quot;handleSetPage(page.number)&quot;&gt;{{ page.name }}&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+          </pre>
+        </code>
+    </section>
+
+    <section id="goal-preserve-state" class="slide">
+      <h2>Preservar estado de la aplicación al recargar o compartir</h2>
+      <h3>AngularJS permite modificar el valor hash de la URL y utilizar esos valores para inicializar el estado de la aplicación:</h3>
+      <ul>
+        <li>$location.path()</li>
+        <li>$location.hash()</li>
+        <li>$location.url()</li>
+        <li>$location.search('foo');</li>
+        <li>$scope.$on('$locationChangeStart', function(event, next, current) {});</li>
+      </ul>
+    </section>
+
+    <section id="goal-config" class="slide">
+      <h2>Fichero de configuración para adaptar mi aplicación fácilmente</h2>
+      <h3>La estructura modular de AngularJS y la posibilidad de declarar constantes que se inician desde una estructura JSON.</h3>
+      <code>
+        <pre>
+        var config_data = {
+          'CONFIG': {
+            'FACETS_ENABLE': true,
+            // Indicates the minimum counts for facet fields should be included in the response
+            'FACETS_MINCOUNT': 1,
+            // Indicates the maximum number of constraint counts that should be returned for the facet fields
+            'FACETS_HARD_LIMIT': 20,
+          }
+        }
+
+        var module = angular.module('SolrSearchApp.config', []);
+        angular.forEach(config_data, function(key, value) {
+          module.constant(value, key);
+        });
+        </pre>
+      </code>
+    </section>
+
+    <section id="goal-sync-vars" class="slide">
+      <h2>Sincronización de valores de variables en elementos de formulario</h2>
+      <h3>Cada controlador de AngularJS tiene una variable $scope cuyas propiedades recibes en las plantillas y con la que puedes asociar alguna a un elemento de fomulario.</h3>
+      <ul>
+        <li>&lt;input type="text" class="form-control" id="query" type="text" ng-model="userQuery" /&gt;</li>
+        <li>$scope.userQuery se inicializa en el controlador con un valor que se alimenta de la URL</li>
+        <li>Si ese valor en la URL es alterado el elemento input lo reflejará de inmediato</li>
+        <li>No es necesario seleccionar el inptu y definir el valor como en jQuery: $('#id').val(myvalue);</li>
+      </ul>
+    </section>
+
+    <section id="angularjs-is-magic" class="slide">
+      <h2>Después de usarlo sólo puedo decir...</h2>
+      <h1>AngulaJS es magia</h1>
+    </section>
+
+    <section id="organizers" class="slide">
+      <h2>Mi reconocimiento a los promotores de esta magia en México</h2>
+      <h1>Josué y Valeria</h1>
+    </section>
+
+    <section id="thanks" class="slide">
+      <h2>Usen magia para materializar sus ideas con un código exquisito</h2>
+      <h1>Gracias por venir</h1>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="../jquery.min.js"></script>
+<script src="../core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
