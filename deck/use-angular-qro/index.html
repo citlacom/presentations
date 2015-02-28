@@ -41,17 +41,17 @@
       <ul>
         <li>Desarrollador PHP / Python / PERL / R / JS / CSS / SASS con 10 años de experiencia</li>
         <li>Estudiante autodidacta de análisis estadístico y minería de datos con R</li>
-        <li>Investigador de los eventos ciclicos y su relación con las órbitas planetarias</li>
+        <li>Investigador de los eventos cíclicos y su relación con las órbitas planetarias</li>
         <li>Emprendedor en internet con proyectos como moduti.com y horoscopeame.com</li>
         <li>Trabajando en proyectos web con el CMS Drupal los últimos 6 años</li>
-        <li>Uso de jQuery en desarollos Drupal para hace páginas más dinámicas</li>
+        <li>Uso de jQuery en desarollos Drupal para hacer páginas más dinámicas</li>
         <li>Frustrado de los snippets JS que crecen más de 200 líneas</li>
       </ul>
     </section>
 
     <section id="jquerydie" class="slide">
-      <h2>Como tú, yo también quedé hechizado con jQuery</h2>
-      <h3>Pero un día me pidieron desarrollar un editor de páginas que no tuviera que recargarse en cada interacción del editor.</h3>
+      <h2>Como tú, quedé hechizado con jQuery</h2>
+      <h3>Pero un día me pidieron desarrollar un editor de páginas que no tuviera que recargarse en cada interacción del usuario.</h3>
       <blockquote><p>El código JS era bastante extenso, más de 1000 líneas de código y difícil de mantener. Algo estaba haciendo mal. <br /> No usaba las herramientas correctas.</p></blockquote>
     </section>
 
@@ -85,12 +85,12 @@
       <h3>AngularJS te obliga a crear controladores específicos para cada parte de tu interfaz y un elemento HTML del DOM queda asociado.</h3>
       <h4>En mi proyecto los principales controladores son:</h4>
       <ul>
-        <li>Main - Controla inicialización de variables de configuración</li>
+        <li>Main - Controla la inicialización de variables de configuración</li>
         <li>SearchBox - Controla la caja de búsqueda</li>
         <li>FacetGroup - Controla la inicialización de los facets</li>
-        <li>FacetField - Controla las opciones de cada facets (activación/desactivación)</li>
-        <li>Results - Controla la visualización general de los resultados y paginación</li>
-        <li>Result - Controla cada elemento individual de los resultados y activación de vista de detalle</li>
+        <li>FacetField - Controla las opciones de cada facet (activación/desactivación)</li>
+        <li>Results - Controla la visualización general de los resultados y la paginación</li>
+        <li>Result - Controla cada elemento de los resultados y la activación de la vista de detalle</li>
         <li>DetailPage - Maneja la visualización de detalle de un resultado</li>
       </ul>
     </section>
@@ -176,7 +176,31 @@
         <li>&lt;input type="text" class="form-control" id="query" type="text" ng-model="userQuery" /&gt;</li>
         <li>$scope.userQuery se inicializa en el controlador con un valor que se alimenta de la URL</li>
         <li>Si ese valor en la URL es alterado el elemento input lo reflejará de inmediato</li>
-        <li>No es necesario seleccionar el inptu y definir el valor como en jQuery: $('#id').val(myvalue);</li>
+        <li>No es necesario seleccionar el input y definir el valor como en jQuery: $('#id').val(myvalue);</li>
+      </ul>
+    </section>
+
+    <section id="goal-services" class="slide">
+      <h2>Disponer de servicios que permitan centralizar la lógica de mi aplicación</h2>
+      <h3>AngularJS dispone de una factoría de servicios y crear un servicio es útil:</h3>
+      <ul>
+        <li>Centralizar toda la lógica que maneja lectura, escritura y procesamiento de datos</li>
+        <li>Mantener los controladores lo más simple posible</li>
+        <li>Compartir el estado de la instancia del servicio entre los controladores</li>
+        <li>Evitar la creación de escuchas y disparadores de eventos con el fin de pasar una variable</li>
+        <li>La inyección de dependencias de los controladores hace fácil inicializar el servicio</li>
+      </ul>
+    </section>
+
+    <section id="tools" class="slide">
+      <h2>Herramientas útiles para desarrollo AngularJS</h2>
+      <ul>
+        <li>Mi editor es GVIM con plugin de JS syntax y https://github.com/burnettk/vim-angular</li>
+        <li>Chrome console y debugger para inspeccionar el flujo de mi aplicación</li>
+        <li>Función console.log para inspeccionar variables</li>
+        <li>Extensión Chrome "AngularJS Inspector" para inspeccionar el $scope asociado a un elemento y jerarquías</li>
+        <li>Gestor de dependencias Bower</li>
+        <li>Repositorio de esqueleto de aplicación "Angular Seed" https://github.com/angular/angular-seed</li>
       </ul>
     </section>
 
